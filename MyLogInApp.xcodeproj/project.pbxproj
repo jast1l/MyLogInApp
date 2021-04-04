@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7B57AE2618CEFE00824CA1 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B57AD2618CEFE00824CA1 /* AboutMeViewController.swift */; };
+		FA7B57B12618CF7500824CA1 /* FreeTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B57B02618CF7500824CA1 /* FreeTimeViewController.swift */; };
+		FA7B57B42618CFC200824CA1 /* MyWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B57B32618CFC200824CA1 /* MyWorkViewController.swift */; };
+		FA7B57BE2619B64200824CA1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B57BD2619B64200824CA1 /* User.swift */; };
+		FA7B57C32619D43B00824CA1 /* BackGroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7B57C22619D43B00824CA1 /* BackGroundColor.swift */; };
 		FABD48DF2618A83E00D31645 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD48DE2618A83E00D31645 /* AppDelegate.swift */; };
 		FABD48E12618A83E00D31645 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD48E02618A83E00D31645 /* SceneDelegate.swift */; };
 		FABD48E32618A83E00D31645 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABD48E22618A83E00D31645 /* LoginViewController.swift */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7B57AD2618CEFE00824CA1 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		FA7B57B02618CF7500824CA1 /* FreeTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeTimeViewController.swift; sourceTree = "<group>"; };
+		FA7B57B32618CFC200824CA1 /* MyWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWorkViewController.swift; sourceTree = "<group>"; };
+		FA7B57BD2619B64200824CA1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA7B57C22619D43B00824CA1 /* BackGroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundColor.swift; sourceTree = "<group>"; };
 		FABD48DB2618A83E00D31645 /* MyLogInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLogInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABD48DE2618A83E00D31645 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABD48E02618A83E00D31645 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +49,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA7B57AB2618CEBE00824CA1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FABD48E22618A83E00D31645 /* LoginViewController.swift */,
+				FABD48F32618B0D900D31645 /* WelcomeViewController.swift */,
+				FA7B57AD2618CEFE00824CA1 /* AboutMeViewController.swift */,
+				FA7B57B32618CFC200824CA1 /* MyWorkViewController.swift */,
+				FA7B57B02618CF7500824CA1 /* FreeTimeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FA7B57B72619B12600824CA1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FABD48E42618A83E00D31645 /* Main.storyboard */,
+				FABD48E92618A84100D31645 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FA7B57B82619B13E00824CA1 /* Resourcers */ = {
+			isa = PBXGroup;
+			children = (
+				FABD48E72618A84100D31645 /* Assets.xcassets */,
+			);
+			path = Resourcers;
+			sourceTree = "<group>";
+		};
+		FA7B57B92619B15D00824CA1 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FABD48DE2618A83E00D31645 /* AppDelegate.swift */,
+				FABD48E02618A83E00D31645 /* SceneDelegate.swift */,
+				FABD48EC2618A84100D31645 /* Info.plist */,
+				FA7B57C22619D43B00824CA1 /* BackGroundColor.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		FA7B57BC2619B58100824CA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA7B57BD2619B64200824CA1 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FABD48D22618A83E00D31645 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +116,11 @@
 		FABD48DD2618A83E00D31645 /* MyLogInApp */ = {
 			isa = PBXGroup;
 			children = (
-				FABD48DE2618A83E00D31645 /* AppDelegate.swift */,
-				FABD48E02618A83E00D31645 /* SceneDelegate.swift */,
-				FABD48E22618A83E00D31645 /* LoginViewController.swift */,
-				FABD48F32618B0D900D31645 /* WelcomeViewController.swift */,
-				FABD48E42618A83E00D31645 /* Main.storyboard */,
-				FABD48E72618A84100D31645 /* Assets.xcassets */,
-				FABD48E92618A84100D31645 /* LaunchScreen.storyboard */,
-				FABD48EC2618A84100D31645 /* Info.plist */,
+				FA7B57AB2618CEBE00824CA1 /* ViewControllers */,
+				FA7B57B72619B12600824CA1 /* Storyboards */,
+				FA7B57BC2619B58100824CA1 /* Models */,
+				FA7B57B92619B15D00824CA1 /* Supporting */,
+				FA7B57B82619B13E00824CA1 /* Resourcers */,
 			);
 			path = MyLogInApp;
 			sourceTree = "<group>";
@@ -140,8 +195,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA7B57C32619D43B00824CA1 /* BackGroundColor.swift in Sources */,
+				FA7B57B42618CFC200824CA1 /* MyWorkViewController.swift in Sources */,
 				FABD48E32618A83E00D31645 /* LoginViewController.swift in Sources */,
+				FA7B57AE2618CEFE00824CA1 /* AboutMeViewController.swift in Sources */,
 				FABD48F42618B0D900D31645 /* WelcomeViewController.swift in Sources */,
+				FA7B57BE2619B64200824CA1 /* User.swift in Sources */,
+				FA7B57B12618CF7500824CA1 /* FreeTimeViewController.swift in Sources */,
 				FABD48DF2618A83E00D31645 /* AppDelegate.swift in Sources */,
 				FABD48E12618A83E00D31645 /* SceneDelegate.swift in Sources */,
 			);
@@ -292,7 +352,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8RWPBP87;
-				INFOPLIST_FILE = MyLogInApp/Info.plist;
+				INFOPLIST_FILE = MyLogInApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +371,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8RWPBP87;
-				INFOPLIST_FILE = MyLogInApp/Info.plist;
+				INFOPLIST_FILE = MyLogInApp/Supporting/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

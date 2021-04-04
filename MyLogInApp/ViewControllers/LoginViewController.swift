@@ -14,26 +14,35 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - Private properties
-    private let user = "User"
-    private let password = "Password"
+    private let persone = User.getUser()
     
     // MARK: - DidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loginTF.delegate = self
-        passwordTF.delegate = self
-        
-        loginButton.layer.cornerRadius = 10
-        loginButton.layer.backgroundColor = #colorLiteral(red: 0.1802025139, green: 0.4792167544, blue: 0.9991418719, alpha: 1)
-        loginButton.alpha = 0.6
-        loginButton.isEnabled = false
+        canfigureAppearance()
     }
+    
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.name = loginTF.text
+        let tabBarController = segue.destination as! UITabBarController
+        
+        if let viewControllers = tabBarController.viewControllers {
+            for viewController in viewControllers {
+
+                if let welcomeVC = viewController as? WelcomeViewController {
+                    welcomeVC.persone = self.persone
+                } else if let aboutVC = viewController as? AboutMeViewController {
+                    aboutVC.persone = self.persone
+                } else if let workNavigationVC = viewController as? UINavigationController,
+                          let workVC = workNavigationVC.topViewController as? MyWorkViewController {
+                        workVC.person = self.persone
+                } else if let freeNavigationVC = viewController as? UINavigationController,
+                          let freeTimeVC = freeNavigationVC.topViewController as? FreeTimeViewController {
+                        freeTimeVC.persone = self.persone
+                    }
+            }
+        }
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -44,7 +53,7 @@ class LoginViewController: UIViewController {
     
     //MARK: -Button
     @IBAction func logInPressed() {
-        if loginTF.text != user || passwordTF.text != password {
+        if loginTF.text != persone.login || passwordTF.text != persone.password {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -57,8 +66,8 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-            ? showAlert(title: "Oops!", message: "Your name is \(user) 😉")
-            : showAlert(title: "Oops!", message: "Your password is \(password) 😉")
+            ? showAlert(title: "Oops!", message: "Your name is \(persone.login) 😉")
+            : showAlert(title: "Oops!", message: "Your password is \(persone.password) 😉")
     }
 }
 
@@ -95,7 +104,19 @@ extension LoginViewController: UITextFieldDelegate {
     }
 }
 
-
+extension LoginViewController {
+    private func canfigureAppearance() {
+        loginTF.delegate = self
+        passwordTF.delegate = self
+        
+        view.addVerticalGradientLayer()
+        
+        loginButton.layer.cornerRadius = 10
+        loginButton.layer.backgroundColor = #colorLiteral(red: 0.1802025139, green: 0.4792167544, blue: 0.9991418719, alpha: 1)
+        loginButton.alpha = 0.6
+        loginButton.isEnabled = false
+    }
+}
 
 //MARK: -AlerController
 extension LoginViewController {
